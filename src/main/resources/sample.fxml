@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="363.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pgs.intern.wizard.task.Controller">
+  <tabs>
+    <Tab text="1">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="255.0" prefWidth="363.0">
+               <children>
+                  <Button layoutX="239.0" layoutY="159.0" mnemonicParsing="false" onAction="#nextPage" prefHeight="25.0" prefWidth="64.0" text="Next" />
+                  <Label layoutX="147.0" layoutY="29.0" prefHeight="35.0" prefWidth="71.0" text="Witaj ">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="125.0" layoutY="77.0" prefHeight="21.0" prefWidth="114.0" text="Wprowadź Imie">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameTextField" layoutX="83.0" layoutY="114.0" onAction="#nameTextGet" onMouseExited="#nameTextGet" prefHeight="25.0" prefWidth="200.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="2">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="226.0" layoutY="156.0" mnemonicParsing="false" onAction="#nextPageThird" prefHeight="25.0" prefWidth="67.0" text="Next" />
+                  <TextField fx:id="surnameTextField" layoutX="91.0" layoutY="102.0" onAction="#surnameTextGet" onMouseExited="#surnameTextGet" prefHeight="25.0" prefWidth="185.0" />
+                  <Button layoutX="70.0" layoutY="156.0" mnemonicParsing="false" onAction="#backPageThird" prefHeight="25.0" prefWidth="57.0" text="Back" />
+                  <Label layoutX="113.0" layoutY="56.0" prefHeight="17.0" prefWidth="141.0" text="Wprowadź Nazwisko">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="3">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="226.0" layoutY="156.0" mnemonicParsing="false" onAction="#nextPageThird" prefHeight="25.0" prefWidth="67.0" text="Next" />
+                  <TextField fx:id="adressTextField" layoutX="91.0" layoutY="102.0" onAction="#adressTextGet" onMouseExited="#adressTextGet" prefHeight="25.0" prefWidth="185.0" />
+                  <Button layoutX="70.0" layoutY="156.0" mnemonicParsing="false" onAction="#backPageThird" prefHeight="25.0" prefWidth="57.0" text="Back" />
+                  <Label layoutX="119.0" layoutY="59.0" prefHeight="17.0" prefWidth="141.0" text="Wprowadź Adres">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="4">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="226.0" layoutY="156.0" mnemonicParsing="false" onAction="#nextPageFourth" prefHeight="25.0" prefWidth="67.0" text="Next" />
+                  <TextField fx:id="numberTextField" layoutX="91.0" layoutY="102.0" onAction="#numberTextGet" onMouseExited="#numberTextGet" prefHeight="25.0" prefWidth="185.0" />
+                  <Button layoutX="70.0" layoutY="156.0" mnemonicParsing="false" onAction="#backPageFourth" prefHeight="25.0" prefWidth="57.0" text="Back" />
+                  <Label layoutX="86.0" layoutY="57.0" prefHeight="21.0" prefWidth="196.0" text="Wprowadź Numer Telefonu">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="5">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="130.0" layoutY="23.0" prefHeight="27.0" prefWidth="104.0" text="Twoje dane :" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="dataList" layoutX="82.0" layoutY="79.0" prefHeight="101.0" prefWidth="200.0" AnchorPane.topAnchor="79.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
