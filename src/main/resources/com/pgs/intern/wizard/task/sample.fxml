@@ -50,7 +50,7 @@
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
                   <Button layoutX="226.0" layoutY="156.0" mnemonicParsing="false" onAction="#nextPageThird" prefHeight="25.0" prefWidth="67.0" text="Next" />
-                  <TextField fx:id="adressTextField" layoutX="91.0" layoutY="102.0" onAction="#adressTextGet" onMouseExited="#adressTextGet" prefHeight="25.0" prefWidth="185.0" />
+                  <TextField fx:id="addressTextField" layoutX="91.0" layoutY="102.0" onAction="#addressTextGet" onMouseExited="#addressTextGet" prefHeight="25.0" prefWidth="185.0" />
                   <Button layoutX="70.0" layoutY="156.0" mnemonicParsing="false" onAction="#backPageThird" prefHeight="25.0" prefWidth="57.0" text="Back" />
                   <Label layoutX="119.0" layoutY="59.0" prefHeight="17.0" prefWidth="141.0" text="Wprowadź Adres">
                      <font>

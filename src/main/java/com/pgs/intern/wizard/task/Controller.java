@@ -20,7 +20,7 @@ public class Controller {
     @FXML
     private TextField surnameTextField;
     @FXML
-    private TextField adressTextField;
+    private TextField addressTextField;
     @FXML
     private TextField numberTextField;
     @FXML
@@ -38,13 +38,13 @@ public class Controller {
     }
 
     @FXML
-    private void adressTextGet() {
-        person.setAddress(adressTextField.getText());
+    private void addressTextGet() {
+        person.setAddress(addressTextField.getText());
     }
 
     @FXML
     private void numberTextGet() {
-        person.setPhone_number(numberTextField.getText());
+        person.setPhoneNumber(numberTextField.getText());
     }
 
 
@@ -66,7 +66,8 @@ public class Controller {
     @FXML
     private void nextPageFourth() {
         tabPane.getSelectionModel().select(tabPane.getSelectionModel().getSelectedIndex() + 1);
-        data.addAll(person.getName(), person.getSurname(), person.getAddress(), person.getPhone_number());
+        setEmptyArguments();
+        data.addAll("Imie : " + person.getName(), "Nazwisko : " + person.getSurname(), "Adres : " + person.getAddress(), "Numer : " + person.getPhoneNumber());
     }
 
     @FXML
@@ -84,11 +85,25 @@ public class Controller {
         tabPane.getSelectionModel().select(tabPane.getSelectionModel().getSelectedIndex() - 1);
     }
 
+    private void setEmptyArguments() {
+        if (person.getName() == null || person.getName().length() == 0) {
+            person.setName("BRAK");
+        }
+        if (person.getSurname() == null || person.getSurname().length() == 0) {
+            person.setSurname("BRAK");
+        }
+        if (person.getAddress() == null || person.getAddress().length() == 0) {
+            person.setAddress("BRAK");
+        }
+        if (person.getPhoneNumber() == null || person.getPhoneNumber().length() == 0) {
+            person.setPhoneNumber("BRAK");
+        }
+    }
+
     @FXML
     void initialize() {
         person = new Person();
         dataList.setItems(data);
-
     }
 
 }

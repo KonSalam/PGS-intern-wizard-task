@@ -8,20 +8,16 @@ public class Person {
     private String name;
     private String surname;
     private String address;
-    private String phone_number;
+    private String phoneNumber;
 
     public Person() {
-        this.name = "";
-        this.surname = "";
-        this.address = "";
-        this.phone_number = "";
     }
 
-    public Person(String name, String surname, String address, String phone_number) {
+    public Person(String name, String surname, String address, String phoneNumber) {
         this.name = name;
         this.surname = surname;
         this.address = address;
-        this.phone_number = phone_number;
+        this.phoneNumber = phoneNumber;
     }
 
     public String getName() {
@@ -48,12 +44,12 @@ public class Person {
         this.address = address;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     @Override
@@ -66,7 +62,7 @@ public class Person {
         if (!name.equals(person.name)) return false;
         if (!surname.equals(person.surname)) return false;
         if (!address.equals(person.address)) return false;
-        return phone_number.equals(person.phone_number);
+        return phoneNumber.equals(person.phoneNumber);
 
     }
 
@@ -75,7 +71,7 @@ public class Person {
         int result = name.hashCode();
         result = 31 * result + surname.hashCode();
         result = 31 * result + address.hashCode();
-        result = 31 * result + phone_number.hashCode();
+        result = 31 * result + phoneNumber.hashCode();
         return result;
     }
 }
