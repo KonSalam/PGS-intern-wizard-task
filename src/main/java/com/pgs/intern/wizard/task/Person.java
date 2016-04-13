@@ -21,7 +21,7 @@ public class Person {
     }
 
     public String getName() {
-        return name;
+        return (name == null || name.length() == 0) ? "BRAK" : name; /*jeżeli nie wpisano imienia to BRAK*/
     }
 
     public void setName(String name) {
@@ -29,7 +29,7 @@ public class Person {
     }
 
     public String getSurname() {
-        return surname;
+        return (surname == null || surname.length() == 0) ? "BRAK" : surname;
     }
 
     public void setSurname(String surname) {
@@ -37,7 +37,7 @@ public class Person {
     }
 
     public String getAddress() {
-        return address;
+        return (address == null || address.length() == 0) ? "BRAK" : address;
     }
 
     public void setAddress(String address) {
@@ -45,7 +45,7 @@ public class Person {
     }
 
     public String getPhoneNumber() {
-        return phoneNumber;
+        return (phoneNumber == null || phoneNumber.length() == 0) ? "BRAK" : phoneNumber;
     }
 
     public void setPhoneNumber(String phoneNumber) {
@@ -59,19 +59,19 @@ public class Person {
 
         Person person = (Person) o;
 
-        if (!name.equals(person.name)) return false;
-        if (!surname.equals(person.surname)) return false;
-        if (!address.equals(person.address)) return false;
-        return phoneNumber.equals(person.phoneNumber);
+        if (name != null ? !name.equals(person.name) : person.name != null) return false;
+        if (surname != null ? !surname.equals(person.surname) : person.surname != null) return false;
+        if (address != null ? !address.equals(person.address) : person.address != null) return false;
+        return phoneNumber != null ? phoneNumber.equals(person.phoneNumber) : person.phoneNumber == null;
 
     }
 
     @Override
     public int hashCode() {
-        int result = name.hashCode();
-        result = 31 * result + surname.hashCode();
-        result = 31 * result + address.hashCode();
-        result = 31 * result + phoneNumber.hashCode();
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (surname != null ? surname.hashCode() : 0);
+        result = 31 * result + (address != null ? address.hashCode() : 0);
+        result = 31 * result + (phoneNumber != null ? phoneNumber.hashCode() : 0);
         return result;
     }
 }

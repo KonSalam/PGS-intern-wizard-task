@@ -26,7 +26,7 @@ public class Controller {
     @FXML
     private ListView dataList;
 
-
+    /*pola od wczytywania danych*/
     @FXML
     private void nameTextGet() {
         person.setName(nameTextField.getText());
@@ -48,6 +48,7 @@ public class Controller {
     }
 
 
+    /*przyciski służące do poruszania się po widoku */
     @FXML
     private void nextPage() {
         tabPane.getSelectionModel().select(tabPane.getSelectionModel().getSelectedIndex() + 1);
@@ -66,9 +67,9 @@ public class Controller {
     @FXML
     private void nextPageFourth() {
         tabPane.getSelectionModel().select(tabPane.getSelectionModel().getSelectedIndex() + 1);
-        setEmptyArguments();
         data.addAll("Imie : " + person.getName(), "Nazwisko : " + person.getSurname(), "Adres : " + person.getAddress(), "Numer : " + person.getPhoneNumber());
     }
+
 
     @FXML
     private void backPageSecond() {
@@ -83,21 +84,6 @@ public class Controller {
     @FXML
     private void backPageFourth() {
         tabPane.getSelectionModel().select(tabPane.getSelectionModel().getSelectedIndex() - 1);
-    }
-
-    private void setEmptyArguments() {
-        if (person.getName() == null || person.getName().length() == 0) {
-            person.setName("BRAK");
-        }
-        if (person.getSurname() == null || person.getSurname().length() == 0) {
-            person.setSurname("BRAK");
-        }
-        if (person.getAddress() == null || person.getAddress().length() == 0) {
-            person.setAddress("BRAK");
-        }
-        if (person.getPhoneNumber() == null || person.getPhoneNumber().length() == 0) {
-            person.setPhoneNumber("BRAK");
-        }
     }
 
     @FXML
